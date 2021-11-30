@@ -25,4 +25,8 @@ public class HelloController {
     public Person personYmlTest(){
         return person;
     }
+    @RequestMapping("/1.png")
+    public String staticPng(){
+        return "1.png文字";
+    }
 }

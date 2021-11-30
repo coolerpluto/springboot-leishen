@@ -23,3 +23,8 @@ person:
     car2:
       - {name: 兰博基尼, price: 4000000}
   user-name: 张三
+
+#spring.mvc.static-path-pattern: 设置静态资源访问前缀，方便区分controller请求和静态资源请求
+spring:
+  mvc:
+    static-path-pattern: /resource
