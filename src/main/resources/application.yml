@@ -28,3 +28,7 @@ person:
 spring:
   mvc:
     static-path-pattern: /resource
+#    处理前端put delete请求方式，用作rest风格
+    hiddenmethod:
+      filter:
+        enabled: true

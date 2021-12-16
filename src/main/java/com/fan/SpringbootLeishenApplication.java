@@ -14,7 +14,7 @@ public class SpringbootLeishenApplication {
         ConfigurableApplicationContext run = SpringApplication.run(SpringbootLeishenApplication.class, args);
         String[] beanDefinitionNames = run.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println(beanDefinitionName);
+//            System.out.println(beanDefinitionName);
         }
         int beanDefinitionCount = run.getBeanDefinitionCount();
         System.out.println("组件数量==="+beanDefinitionCount);
