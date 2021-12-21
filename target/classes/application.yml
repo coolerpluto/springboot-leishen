@@ -1,0 +1,34 @@
+#使用配置文件赋值，key不能是中文，必须是英文
+person:
+  boss: true
+  birth: 2007/10/10
+  age: 18
+  car:
+    name: 奔驰
+    price: 970000
+  interests: [篮球,足球,乒乓球]
+  animal: [狗,猫]
+  score:
+    math: 100
+    english: 100
+  salaries:
+    - 100000
+    - 200000
+  allCars:
+    car1:
+      - name: 奔驰
+        price: 1000000
+      - name: 宝马
+        price: 2000000
+    car2:
+      - {name: 兰博基尼, price: 4000000}
+  user-name: 张三
+
+#spring.mvc.static-path-pattern: 设置静态资源访问前缀，方便区分controller请求和静态资源请求
+spring:
+  mvc:
+    static-path-pattern: /resource
+#    处理前端put delete请求方式，用作rest风格
+    hiddenmethod:
+      filter:
+        enabled: true
