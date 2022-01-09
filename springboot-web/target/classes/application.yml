@@ -1,2 +1,8 @@
+#spring.servlet.multipart.max-file-size是单个文件上传大小限制，max-request-size是请求整体上传大小限制
 server:
   port: 6789
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
