@@ -23,7 +23,6 @@ public class IndexController {
         }else {
             return "login";
         }
-
     }
 
     @GetMapping("/main.html")
