@@ -25,6 +25,8 @@ public class IndexController {
         }
     }
 
+
+
     @GetMapping("/main.html")
     public String mainPage(HttpSession session){
 //        System.out.println(session.getAttribute("userStatus"));
