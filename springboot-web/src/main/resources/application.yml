@@ -12,8 +12,8 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
-#  给配置文件对象设置特定参数有两种方式：1、新建mybatis配置文件，写好配置文件的路径，然后再配置文件里写要设置的参数，如骆驼峰变量名
-#  2、不写配置文件路径，直接在yml里通过。mybatis.configuration这个前缀来设置想要的特定参数
+#  给配置文件对象设置特定参数有两种方式：1、新建mybatis配置文件，然后在yml写好配置文件的路径（config-location），然后再在配置文件里写要设置的参数，如骆驼峰变量名
+#  2、不新建mybatis配置文件，不写配置文件路径，直接在yml里通过mybatis.configuration这个前缀来设置想要的特定参数
 #  config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:
