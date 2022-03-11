@@ -2,15 +2,23 @@ package com.fan.controller;
 
 import com.fan.bean.User;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 @Slf4j
 @Controller
 public class IndexController {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
     @GetMapping(value = {"/","/login"})
     public String loginPage(){
         return "login";
@@ -36,6 +44,14 @@ public class IndexController {
 //            return "login";
 //        }
         log.info("执行了控制器：mainPage");
+
         return "main";
+    }
+
+    @ResponseBody
+    @RequestMapping("/jdbcQuery")
+    public String queryFromDb(){
+        Long along = jdbcTemplate.queryForObject("select count(1) from account", Long.class);
+        return along.toString();
     }
 }
